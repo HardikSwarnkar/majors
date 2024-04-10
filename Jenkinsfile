@@ -40,7 +40,7 @@ pipeline {
             steps {
                 // Clean up temporary files or resources
                 catchError {
-                bat 'del /q C:\\path\\to\\temporary\\directory\\*.*'// Adjusted path to the cleanup script
+             
             echo 'Clean up completed'
                 }
             }
