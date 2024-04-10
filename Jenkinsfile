@@ -5,13 +5,17 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Maven to build the application
-                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean package -DskipTests=true'
+                catchError {
+                    bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean package -DskipTests=true'
+                }
             }
         }
         stage('Test') {
             steps {
                 // Execute tests
-                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean test'
+                catchError {
+                    bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean test'
+                }
             }
             post {
                 // If Maven was able to run the tests, record the test results and archive the HTML report
@@ -48,8 +52,10 @@ pipeline {
         stage('Clean Up') {
             steps {
                 // Clean up temporary files or resources
-                bat 'cleanup-script.bat' // Example cleanup script for Windows
-                echo 'Clean up completed'
+                catchError {
+                    bat 'cleanup-script.bat' // Example cleanup script for Windows
+                    echo 'Clean up completed'
+                }
             }
         }
     }
