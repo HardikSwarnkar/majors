@@ -2,16 +2,22 @@ pipeline {
     agent any
 
     stages {
-      
+        stage('Build') {
+            steps {
+                // Use Maven to build the application
+                bat 'mvn clean package'
+            }
+        }
         stage('Test') {
             steps {
                 // Execute tests
-                bat "mvn clean test"
+                bat 'mvn clean test'
             }
             post {            	
                 // If Maven was able to run the tests, record the test results and archive the HTML report
                 success {
-                   publishHTML([
+                   junit '**/target/surefire-reports/*.xml' // Record test results
+                   publishHTML([ // Archive HTML report
                        allowMissing: false,
                        alwaysLinkToLastBuild: false,
                        keepAll: false,
@@ -19,7 +25,8 @@ pipeline {
                        reportFiles: 'emailable-report.html',
                        reportName: 'HTML Report',
                        reportTitles: '',
-                       useWrapperFileDirectly: true])
+                       useWrapperFileDirectly: true
+                   ])
                 }
             }
         }
