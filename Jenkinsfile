@@ -1,21 +1,17 @@
 pipeline {
     agent any
 
-    environment {
-        PATH = "${env.MAVEN_HOME}\\bin;${env.PATH}"
-    }
-
     stages {
         stage('Build') {
             steps {
                 // Use Maven to build the application
-                bat '"%MAVEN_HOME%\\bin\\mvn" clean package'
+                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean package'
             }
         }
         stage('Test') {
             steps {
                 // Execute tests
-                bat '"%MAVEN_HOME%\\bin\\mvn" clean test'
+                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean test'
             }
             post {            	
                 // If Maven was able to run the tests, record the test results and archive the HTML report
