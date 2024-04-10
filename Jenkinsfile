@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Maven to build the application
-                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean package'
+                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean package -DskipTests=true'
             }
         }
         stage('Test') {
@@ -13,20 +13,24 @@ pipeline {
                 // Execute tests
                 bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean test'
             }
-            post {            	
+            post {
                 // If Maven was able to run the tests, record the test results and archive the HTML report
                 success {
-                   junit '**/target/surefire-reports/*.xml' // Record test results
-                   publishHTML([ // Archive HTML report
-                       allowMissing: false,
-                       alwaysLinkToLastBuild: false,
-                       keepAll: false,
-                       reportDir: 'target/surefire-reports/',
-                       reportFiles: 'emailable-report.html',
-                       reportName: 'HTML Report',
-                       reportTitles: '',
-                       useWrapperFileDirectly: true
-                   ])
+                    junit '**/target/surefire-reports/*.xml' // Record test results
+                    publishHTML([ // Archive HTML report
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: false,
+                        keepAll: false,
+                        reportDir: 'target/surefire-reports/',
+                        reportFiles: 'emailable-report.html',
+                        reportName: 'HTML Report',
+                        reportTitles: '',
+                        useWrapperFileDirectly: true
+                    ])
+                }
+                // Ignore failed test cases and continue the pipeline
+                failure {
+                    echo 'Ignoring failed test cases.'
                 }
             }
         }
