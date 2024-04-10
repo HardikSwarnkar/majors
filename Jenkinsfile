@@ -9,13 +9,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Maven to build the application
-                bat 'mvn clean package'
+                bat '"%MAVEN_HOME%\\bin\\mvn" clean package'
             }
         }
         stage('Test') {
             steps {
                 // Execute tests
-                bat 'mvn clean test'
+                bat '"%MAVEN_HOME%\\bin\\mvn" clean test'
             }
             post {            	
                 // If Maven was able to run the tests, record the test results and archive the HTML report
