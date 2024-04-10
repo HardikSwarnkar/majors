@@ -1,56 +1,28 @@
 pipeline {
     agent any
-
+ 
     stages {
-        stage('Build') {
-            steps {
-                // Use Maven to build the application
-                bat 'mvn clean install'
-            }
-        }
         stage('Test') {
             steps {
-                // Execute demo test cases
-                bat 'mvn test'
+                bat "mvn -D clean test"
             }
-            post {
-                // Fail the pipeline if any of the tests fail
-                failure {
-                    echo 'Tests failed. Failing the pipeline.'
-                    currentBuild.result = 'FAILED'
+ 
+            post {            	
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+                success {
+                   publishHTML([
+                       allowMissing: false,
+                       alwaysLinkToLastBuild: false,
+                       keepAll: false,
+                       reportDir: 'target/surefire-reports/',
+                       reportFiles: 'emailable-report.html',
+                       reportName: 'HTML Report',
+                       reportTitles: '',
+                       useWrapperFileDirectly: true])
                 }
             }
-        }
-        stage('Deployment') {
-            steps {
-                // Example deployment step - Replace with actual deployment script
-                echo 'Deploying the application'
-                // Report deployment status
-                catchError {
-                    sh 'deploy-script.sh' // Example deployment script
-                    echo 'Deployment successful'
-                }
-            }
-        }
-        stage('Clean Up') {
-            steps {
-                // Clean up temporary files or resources
-                sh 'cleanup-script.sh' // Example cleanup script
-                echo 'Clean up completed'
-            }
-        }
-    }
-
-    post {
-        // Notify on pipeline failure
-        failure {
-            echo 'Pipeline failed. Notify the team.'
-            // Example of sending a notification email
-            emailext (
-                subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
-                body: "The pipeline ${currentBuild.fullDisplayName} has failed. Please check Jenkins for details.",
-                to: "team@example.com"
-            )
         }
     }
 }
+
