@@ -39,7 +39,7 @@ pipeline {
             steps {
                 // Clean up temporary files or resources
                 catchError {
-                    bat '"C:\\path\\to\\cleanup-script.bat"' // Replace with the absolute path to cleanup-script.bat
+                   bat 'cleanup-script.bat' // Example cleanup script for Windows
                     echo 'Clean up completed'
                 }
             }
