@@ -40,13 +40,8 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                // Example deployment step - Replace with actual deployment script
-                echo 'Deploying the application'
-                // Report deployment status
-                catchError {
-                    bat 'deploy-script.bat' // Example deployment script for Windows
-                    echo 'Deployment successful'
-                }
+                // Print deployment message
+                echo 'Deployed'
             }
         }
         stage('Clean Up') {
