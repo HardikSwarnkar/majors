@@ -40,8 +40,8 @@ pipeline {
             steps {
                 // Clean up temporary files or resources
                 catchError {
-                   bat 'cleanup-script.bat' // Example cleanup script for Windows
-                    echo 'Clean up completed'
+                   bat '"majors\\cleanup-script.bat"' // Absolute or relative path to cleanup-script.bat
+                  echo 'Clean up completed'
                 }
             }
         }
