@@ -1,0 +1,106 @@
+Installation and Usage Guide
+
+Introduction
+
+This document provides instructions for installing and running the code.
+Installation
+To install and run the code, follow these steps:
+Clone the Repository:
+bash
+Copy code
+git clone <repository_url>
+Replace <repository_url> with the URL of the Git repository.
+
+Navigate to the Project Directory:
+bash
+Copy code
+cd <project_directory>
+Replace <project_directory> with the name of the directory where the repository was cloned.
+
+
+Install Dependencies:
+Ensure that Java and WebDriver executables (ChromeDriver, GeckoDriver, EdgeDriver) are installed on your system and their paths are correctly set.
+Ensure that TestNG and Selenium WebDriver libraries are included in the project's dependencies.
+
+
+Running the Code
+Once the installation steps are completed, you can run the code by following these steps:
+Execute the TestNG Test Suite:
+Open the project in your preferred IDE.
+Locate the TestNG test class (TestNG.java) in the test package.
+
+Right-click on the class and select "Run as TestNG Test" or execute the test suite using Maven or Gradle commands.
+Select Browser Option:
+Modify the initializeDriver class to include the desired browser option (Chrome, Firefox, Edge).
+In the test class (TestNG.java), call the initializeDriver method with the chosen browser option.
+Review Test Results:
+After executing the test suite, review the results in the test output.
+TestNG generates detailed test reports that can be accessed to view the test execution status.
+Troubleshooting
+If you encounter any issues during installation or execution, refer to the following resources:
+Official documentation for TestNG, Selenium WebDriver, and respective browser drivers.
+Check for any error messages in the IDE console or test output.
+
+
+Here's an updated version of the README document with instructions on how to change the browser and properties in the `config.properties` file:
+
+---
+
+# Installation and Usage Guide
+
+## Introduction
+This document provides instructions for installing and running the code.
+
+## Installation
+To install and run the code, follow these steps:
+
+1. **Clone the Repository:**
+   ```
+   git clone <repository_url>
+   ```
+   Replace `<repository_url>` with the URL of the Git repository.
+
+2. **Navigate to the Project Directory:**
+   ```
+   cd <project_directory>
+   ```
+   Replace `<project_directory>` with the name of the directory where the repository was cloned.
+
+3. **Install Dependencies:**
+   - Ensure that Java and WebDriver executables (ChromeDriver, GeckoDriver, EdgeDriver) are installed on your system and their paths are correctly set.
+   - Ensure that TestNG and Selenium WebDriver libraries are included in the project's dependencies.
+
+## Configuring Browser and Properties
+Before running the tests, you can configure the browser and other properties in the `config.properties` file:
+
+1. **Changing Browser:**
+   - Open the `initializeDriver` class located in the `pages` package.
+   - Update the `initializeDriver` method to use the desired browser option (Chrome, Firefox, Edge).
+   - Example:
+     ```java
+     public WebDriver initializeDriver() {
+         driver = new ChromeDriver(); // Change to FirefoxDriver() or EdgeDriver() as needed
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+         return driver;
+     }
+     ```
+
+2. **Changing Properties in `config.properties`:**
+   - Open the `config.properties` file located in the `config` package.
+   - Modify the properties according to your requirements.
+   - Example:
+     ```
+     searchQuery=your_search_query
+     applicationUrl=your_application_url
+     product=your_product_url
+     username=your_username
+     phone=your_phone
+     password=your_password
+     register_page_url=your_register_page_url
+     ```
+
+## Running the Code
+Once the installation and configuration steps are completed, you can run the code by following the instructions in the previous section.
+
+## Troubleshooting
+If you encounter any issues during installation or execution, refer to the troubleshooting section in the previous version of this document.

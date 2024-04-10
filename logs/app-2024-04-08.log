@@ -1,0 +1,16 @@
+[INFO ] 2024-04-08 09:56:01.984 [main] TestNG - Amazon SearchTest
+[INFO ] 2024-04-08 09:56:06.744 [main] TestNG - OPEN PRODUCT
+[INFO ] 2024-04-08 09:56:06.766 [main] TestNG - IMAGE CHANGE
+[INFO ] 2024-04-08 09:56:10.536 [main] TestNG - CHANGE COLOR
+[INFO ] 2024-04-08 09:56:12.803 [main] TestNG - Add to wish
+[INFO ] 2024-04-08 09:57:01.737 [main] TestNG - Amazon SearchTest
+[INFO ] 2024-04-08 09:57:10.391 [main] TestNG - OPEN PRODUCT
+[INFO ] 2024-04-08 09:57:10.614 [main] TestNG - IMAGE CHANGE
+[INFO ] 2024-04-08 09:57:19.052 [main] TestNG - CHANGE COLOR
+[INFO ] 2024-04-08 09:57:23.008 [main] TestNG - Add to wish
+[INFO ] 2024-04-08 09:57:27.871 [main] TestNG - Add to product
+[INFO ] 2024-04-08 09:57:34.688 [main] TestNG - ProceedToCheckout
+[INFO ] 2024-04-08 09:57:41.344 [main] TestNG - verifyAmazonLogoPresence
+[INFO ] 2024-04-08 09:57:44.198 [main] TestNG - verifyCartIconClickable
+[INFO ] 2024-04-08 09:57:48.285 [main] TestNG - AmazonSearchTest_Fail1
+[INFO ] 2024-04-08 09:57:49.664 [main] TestNG - SearchForNonExistentItem

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="9" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-09T12:13:35Z" name="Default suite" finished-at="2024-04-09T12:15:17Z" duration-ms="101608">
+    <groups>
+    </groups>
+    <test started-at="2024-04-09T12:13:35Z" name="Default test" finished-at="2024-04-09T12:15:17Z" duration-ms="101608">
+      <class name="test.TestNG">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:43:35Z" name="setUp" finished-at="2024-04-09T17:43:44Z" duration-ms="8945" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="amazonSearchTest()[pri:1, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:43:44Z" name="amazonSearchTest" finished-at="2024-04-09T17:44:08Z" duration-ms="23913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amazonSearchTest -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:08Z" name="Aftermethod" finished-at="2024-04-09T17:44:08Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=amazonSearchTest status=SUCCESS method=TestNG.amazonSearchTest()[pri:1, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="openProductPage()[pri:2, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:08Z" name="openProductPage" finished-at="2024-04-09T17:44:14Z" duration-ms="5674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openProductPage -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:14Z" name="Aftermethod" finished-at="2024-04-09T17:44:14Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openProductPage status=SUCCESS method=TestNG.openProductPage()[pri:2, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="changeImage()[pri:3, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:14Z" name="changeImage" finished-at="2024-04-09T17:44:20Z" duration-ms="6830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeImage -->
+        <test-method signature="changeColor()[pri:4, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:20Z" name="changeColor" finished-at="2024-04-09T17:44:24Z" duration-ms="3599" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.106)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [70054bf0d91599734e0b15a4a779b581, clickElement {id=f.847767A9828BF442A47DE979D02D013A.d.5A9D12640BF5156B76AE60639280A7B4.e.802}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.106, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52598}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52598/devtoo..., se:cdpVersion: 123.0.6312.106, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (70054bf0d91599734e0b15a4a779b581)] -> id: a-autoid-14]
+Session ID: 70054bf0d91599734e0b15a4a779b581]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.106)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [70054bf0d91599734e0b15a4a779b581, clickElement {id=f.847767A9828BF442A47DE979D02D013A.d.5A9D12640BF5156B76AE60639280A7B4.e.802}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.106, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52598}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52598/devtoo..., se:cdpVersion: 123.0.6312.106, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (70054bf0d91599734e0b15a4a779b581)] -> id: a-autoid-14]
+Session ID: 70054bf0d91599734e0b15a4a779b581
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.changeColor.changeColors(changeColor.java:22)
+	at test.TestNG.changeColor(TestNG.java:144)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeColor -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:20Z" name="Aftermethod" finished-at="2024-04-09T17:44:20Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=changeImage status=SUCCESS method=TestNG.changeImage()[pri:3, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:24Z" name="Aftermethod" finished-at="2024-04-09T17:44:25Z" duration-ms="587" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=changeColor status=FAILURE method=TestNG.changeColor()[pri:4, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="addToWishlist()[pri:5, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:25Z" name="addToWishlist" finished-at="2024-04-09T17:44:25Z" duration-ms="5" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:1112)
+	at java.base/java.util.Map.of(Map.java:1365)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:301)
+	at pages.AmazonPageObjects.addToWishlist(AmazonPageObjects.java:94)
+	at test.TestNG.addToWishlist(TestNG.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToWishlist -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:25Z" name="Aftermethod" finished-at="2024-04-09T17:44:25Z" duration-ms="662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addToWishlist status=FAILURE method=TestNG.addToWishlist()[pri:5, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="addProductToCart()[pri:6, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:25Z" name="addProductToCart" finished-at="2024-04-09T17:44:36Z" duration-ms="10508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductToCart -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:36Z" name="Aftermethod" finished-at="2024-04-09T17:44:36Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addProductToCart status=SUCCESS method=TestNG.addProductToCart()[pri:6, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="proceedToCheckout()[pri:7, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:36Z" name="proceedToCheckout" finished-at="2024-04-09T17:44:41Z" duration-ms="4807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- proceedToCheckout -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:41Z" name="Aftermethod" finished-at="2024-04-09T17:44:41Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=proceedToCheckout status=SUCCESS method=TestNG.proceedToCheckout()[pri:7, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="signUPCredentials()[pri:8, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:41Z" name="signUPCredentials" finished-at="2024-04-09T17:44:47Z" duration-ms="6492" status="FAIL">
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<Amazon Registration> but was:<Dashboard>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: expected:<Amazon Registration> but was:<Dashboard>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at pages.RegisterAmazon.signUPCredential(RegisterAmazon.java:98)
+	at test.TestNG.signUPCredentials(TestNG.java:192)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUPCredentials -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:47Z" name="Aftermethod" finished-at="2024-04-09T17:44:47Z" duration-ms="150" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signUPCredentials status=FAILURE method=TestNG.signUPCredentials()[pri:8, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="verifyAmazonLogoPresence()[pri:9, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:47Z" name="verifyAmazonLogoPresence" finished-at="2024-04-09T17:44:54Z" duration-ms="6959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAmazonLogoPresence -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:54Z" name="Aftermethod" finished-at="2024-04-09T17:44:54Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAmazonLogoPresence status=SUCCESS method=TestNG.verifyAmazonLogoPresence()[pri:9, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="verifyCartIconClickable()[pri:10, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:44:54Z" name="verifyCartIconClickable" finished-at="2024-04-09T17:45:08Z" duration-ms="13247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartIconClickable -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:45:08Z" name="Aftermethod" finished-at="2024-04-09T17:45:08Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCartIconClickable status=SUCCESS method=TestNG.verifyCartIconClickable()[pri:10, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="amazonSearchTest_Fail1()[pri:11, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:45:08Z" name="amazonSearchTest_Fail1" finished-at="2024-04-09T17:45:13Z" duration-ms="5908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amazonSearchTest_Fail1 -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:45:13Z" name="Aftermethod" finished-at="2024-04-09T17:45:13Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=amazonSearchTest_Fail1 status=SUCCESS method=TestNG.amazonSearchTest_Fail1()[pri:11, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+        <test-method signature="searchForNonExistentItem()[pri:12, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:45:13Z" name="searchForNonExistentItem" finished-at="2024-04-09T17:45:15Z" duration-ms="1944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchForNonExistentItem -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:45:15Z" name="tearDown" finished-at="2024-04-09T17:45:17Z" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="Aftermethod(org.testng.ITestResult)[pri:0, instance:test.TestNG@69f63d95]" started-at="2024-04-09T17:45:15Z" name="Aftermethod" finished-at="2024-04-09T17:45:15Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchForNonExistentItem status=SUCCESS method=TestNG.searchForNonExistentItem()[pri:12, instance:test.TestNG@69f63d95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aftermethod -->
+      </class> <!-- test.TestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

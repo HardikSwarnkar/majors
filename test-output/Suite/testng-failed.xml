@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test parallel="tests" name="Chrome Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.TestNG">
+        <methods>
+          <include name="amazonSearchTest"/>
+          <include name="signUPCredentials"/>
+          <include name="verifyCartIconClickable"/>
+          <include name="proceedToCheckout"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Aftermethod"/>
+          <include name="changeColor"/>
+          <include name="amazonSearchTest_Fail1"/>
+          <include name="addToWishlist"/>
+          <include name="changeImage"/>
+        </methods>
+      </class> <!-- test.TestNG -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test parallel="tests" name="Edge Test(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="test.TestNG">
+        <methods>
+          <include name="signUPCredentials"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Aftermethod"/>
+          <include name="changeColor"/>
+          <include name="addToWishlist"/>
+          <include name="changeImage"/>
+        </methods>
+      </class> <!-- test.TestNG -->
+    </classes>
+  </test> <!-- Edge Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

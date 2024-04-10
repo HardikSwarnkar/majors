@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="test.TestNG">
+        <methods>
+          <include name="signUPCredentials"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Aftermethod"/>
+          <include name="changeColor"/>
+          <include name="addToWishlist"/>
+        </methods>
+      </class> <!-- test.TestNG -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
