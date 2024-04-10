@@ -40,7 +40,7 @@ pipeline {
             steps {
                 // Clean up temporary files or resources
                 catchError {
-                 bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\majors\\cleanup-script.bat' // Adjusted path to the cleanup script
+                bat '"../majors/cleanup-script.bat"'// Adjusted path to the cleanup script
             echo 'Clean up completed'
                 }
             }
