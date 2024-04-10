@@ -7,7 +7,8 @@ pipeline {
             steps {
                 // Use Maven to build the application
                 catchError {
-                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn"
+                bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean package -DskipTests=true'
+
                 }
             }
         }
