@@ -21,16 +21,7 @@ pipeline {
                 // If Maven was able to run the tests, record the test results and archive the HTML report
                 success {
                     junit '**/target/surefire-reports/*.xml' // Record test results
-                    publishHTML([ // Archive HTML report
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: false,
-                        keepAll: false,
-                        reportDir: 'target/surefire-reports/',
-                        reportFiles: 'emailable-report.html',
-                        reportName: 'HTML Report',
-                        reportTitles: '',
-                        useWrapperFileDirectly: true
-                    ])
+                   
                 }
                 // Ignore failed test cases and continue the pipeline
                 failure {
