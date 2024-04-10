@@ -44,11 +44,11 @@ pipeline {
                 echo 'Deployed'
             }
         }
-        stage('Clean Up') {
+      stage('Clean Up') {
             steps {
                 // Clean up temporary files or resources
                 catchError {
-                    bat 'cleanup-script.bat' // Example cleanup script for Windows
+                    bat '"C:\\path\\to\\cleanup-script.bat"' // Replace with the absolute path to cleanup-script.bat
                     echo 'Clean up completed'
                 }
             }
