@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Maven to build the application
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
         stage('Test') {
             steps {
                 // Execute demo test cases
-                sh 'mvn test'
+                bat 'mvn test'
             }
             post {
                 // Fail the pipeline if any of the tests fail
