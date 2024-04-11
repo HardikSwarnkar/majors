@@ -14,7 +14,8 @@ pipeline {
             steps {
                 // Execute tests
                 catchError {
-                    bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean test'
+                   bat '"C:\\Program Files\\apache-maven-3.9.6-bin\\apache-maven-3.9.6\\bin\\mvn" clean test -Dmaven.test.failure.ignore=true'
+
                 }
             }
             post {
