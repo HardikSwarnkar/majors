@@ -23,7 +23,7 @@ pipeline {
                 failure {
                     echo 'Ignoring failed test cases.'
                 }
-            }
+            
         }
         stage('Deployment') {
             steps {
